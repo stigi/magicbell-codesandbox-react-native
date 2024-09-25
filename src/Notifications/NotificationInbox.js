@@ -1,6 +1,6 @@
 import { useNotifications } from "@magicbell/react-headless";
 import React from "react";
-import { FlatList } from "react-native";
+import { FlatList, Text } from "react-native";
 import Notification from "./Notification";
 
 /**
@@ -12,10 +12,10 @@ import Notification from "./Notification";
 function NotificationInbox() {
   const store = useNotifications();
 
-  if (!store) return null;
+  if (!store) return <Text>Loading...</Text>;
   return (
     <FlatList
-      data={store.items}
+      data={store.notifications}
       keyExtractor={(notification) => notification.id}
       renderItem={({ item }) => <Notification notification={item} />}
     />

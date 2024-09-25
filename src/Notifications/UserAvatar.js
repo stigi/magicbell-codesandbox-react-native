@@ -1,5 +1,5 @@
 import React from "react";
-import { Image } from "react-native-elements";
+import { Image } from "react-native";
 
 /**
  * Render the avatar of the notification sender (through

@@ -15,7 +15,7 @@ function NotificationHeader({ notification }) {
         {notification.title}
       </Text>
       <Text style={{ color: "#939da8", fontSize: 13 }}>
-        {notification.sentAtDate.format("DD MMM, YYYY")}
+        {notification.sentAtDate?.format("DD MMM, YYYY")}
       </Text>
     </View>
   );
